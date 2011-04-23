@@ -15,8 +15,8 @@ def ensure_git_pristine
 end
 
 def create_tag(tag)
-  sh "git commit -a -m 'Build #{tag}'"
-  sh "git tag -a -m 'Build #{tag}' b#{tag}"
+  sh "git commit -a -m '#{tag}'"
+  sh "git tag -a -m '#{tag}' b#{tag}"
   sh "git push origin master tag b#{tag}"
 end
 
